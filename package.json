@@ -5,7 +5,7 @@
   "author": "mitaroThanken",
   "license": "Apache-2.0",
   "repository": "mitaroThanken/react-iframe",
-  "main": "dist/index.js",
+  "main": "dist/IFrame.js",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
