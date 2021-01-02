@@ -13,7 +13,6 @@ jobs:
         with:
           node-version: 14
       - run: npm ci
-      - run: npm build
       - run: npm test
 
   publish-gpr:
@@ -29,6 +28,7 @@ jobs:
       - run: npm ci
       - run: |
           echo registry=https://npm.pkg.github.com/mitarothanken >> .npmrc
+          npm build
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
