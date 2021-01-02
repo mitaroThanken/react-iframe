@@ -28,7 +28,7 @@ jobs:
       - run: npm ci
       - run: |
           echo registry=https://npm.pkg.github.com/mitarothanken >> .npmrc
-          npm build
+          npm run build
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
