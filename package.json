@@ -1,10 +1,10 @@
 {
-  "name": "react-iframe",
+  "name": "@mitarothanken/react-iframe",
   "version": "0.1.0",
-  "description": "iframe for React inspierd by Gist 'robertgonzales / Frame.js'",
+  "description": "iframe for React inspierd by Gist 'robertgonzales/Frame.js'",
   "author": "mitaroThanken",
   "license": "Apache-2.0",
-  "repository": "mitaroThanken/react-iframe",
+  "repository": "git://github.com/mitaroThanken/react-iframe.git",
   "main": "dist/IFrame.js",
   "engines": {
     "node": ">=8",
