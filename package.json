@@ -1,6 +1,6 @@
 {
   "name": "@mitarothanken/react-iframe",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "iframe for React inspierd by Gist 'robertgonzales/Frame.js'",
   "author": "mitaroThanken",
   "license": "Apache-2.0",
