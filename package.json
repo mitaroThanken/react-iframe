@@ -1,0 +1,19 @@
+{
+  "name": "react-iframe",
+  "version": "1.0.0-alpha.4",
+  "description": "IFrame inspired by Gist 'robert gonzalez/Frame.js'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitaroThanken/react-iframe.git"
+  },
+  "author": "mitarothanken",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitaroThanken/react-iframe/issues"
+  },
+  "homepage": "https://github.com/mitaroThanken/react-iframe#readme"
+}
