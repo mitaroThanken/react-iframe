@@ -11,11 +11,26 @@ import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import * as ReactDOM from 'react-dom';
 
-type IFrameProps = {
-  children?: React.ReactNode;
+export type IFrameProps = {
+  /**
+   * iframe に対する title 属性
+   */
+  title: string;
+
+  /**
+   * iframe.contentDocument.head に設定する ReactNode
+   */
   head?: React.ReactNode;
+
+  /**
+   * iframe.contentDocument.body に設定する ReactNode
+   */
+  children?: React.ReactNode;
 } & JSX.IntrinsicElements['iframe'];
 
+/**
+ * Functional Component 化した iframe
+ */
 export const IFrame: React.FC<IFrameProps> = ({
   title,
   children,
