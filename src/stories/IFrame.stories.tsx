@@ -11,6 +11,20 @@ export default {
 
 const Template: Story<IFrameProps> = (args) => <IFrame {...args} />;
 
+export const YouTubePlayerAndEmbeddedContents = Template.bind({});
+YouTubePlayerAndEmbeddedContents.args = {
+  title: 'embedded YouTube Player',
+  width: '560',
+  height: '315',
+  src: 'https://www.youtube.com/embed/6bbFuPFaEjs',
+  frameBorder: '0',
+  allow:
+    'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
+  allowFullScreen: true,
+  head: <title>custom IFrame test</title>,
+  children: <h1>Hello world</h1>,
+};
+
 export const EmbeddedContents = Template.bind({});
 EmbeddedContents.args = {
   title: 'embedded contents',
@@ -27,5 +41,5 @@ YouTubePlayer.args = {
   frameBorder: '0',
   allow:
     'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
-  allowFullScreen: 'true',
+  allowFullScreen: true,
 };
