@@ -61,8 +61,9 @@ export const IFrame: React.FC<IFrameProps> = ({
 
   useEffect(() => {
     if (iframeRef && iframeRef.current && iframeRef.current.contentDocument) {
-      setIFrameHead(iframeRef.current.contentDocument.head);
-      setIFrameRoot(iframeRef.current.contentDocument.body);
+      const document = iframeRef.current.contentDocument;
+      setIFrameHead(document.head);
+      setIFrameRoot(document.body);
     }
   }, [iframeRef]);
 
