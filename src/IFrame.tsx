@@ -48,6 +48,9 @@ export const IFrame: React.FC<IFrameProps> = ({
   const [iframeHead, setIFrameHead] = useState<Element>();
   const [iframeRoot, setIFrameRoot] = useState<Element>();
 
+  const _head = head ? head : <title>{title}</title>;
+  const _body = children ? children : <h1>Now Loading...</h1>;
+
   useEffect(() => {
     if (iframeRef && iframeRef.current && iframeRef.current.contentDocument) {
       setIFrameHead(iframeRef.current.contentDocument.head);
@@ -63,8 +66,8 @@ export const IFrame: React.FC<IFrameProps> = ({
 
   return (
     <iframe title={title} {...rest} ref={iframeRef}>
-      {iframeHead && ReactDOM.createPortal(head, iframeHead)}
-      {iframeRoot && ReactDOM.createPortal(children, iframeRoot)}
+      {iframeHead && ReactDOM.createPortal(_head, iframeHead)}
+      {iframeRoot && ReactDOM.createPortal(_body, iframeRoot)}
     </iframe>
   );
 };
