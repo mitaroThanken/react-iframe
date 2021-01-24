@@ -19,22 +19,30 @@ export type IFrameProps = {
 
   /**
    * iframe.contentDocument.head に設定する ReactNode
+   *
+   * デフォルトは <src>&lt;title&gt;{title}&lt;/title&gt;</src> です。
    */
   head?: React.ReactNode;
 
   /**
    * iframe.contentDocument.body に設定する ReactNode
+   *
+   * デフォルトは <src>&lt;h1&gt;Now Loading...&lt;/h1&gt;</src> です。
    */
   children?: React.ReactNode;
 
   /**
    * iframe に表示する src
+   *
+   * src の適用は head と children のペアの後になります。
    */
   src?: string;
 } & JSX.IntrinsicElements['iframe'];
 
 /**
  * Functional Component 化した iframe
+ *
+ * Description のない Props は JSX.IntrinsicElements['iframe'] により提供されたもので、そのまま <src>&lt;iframe&gt;</src> の属性として適用されます。
  */
 export const IFrame: React.FC<IFrameProps> = ({
   title,
