@@ -1,6 +1,6 @@
 {
   "name": "@mitarothanken/react-iframe",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "description": "IFrame inspired by Gist 'robert gonzalez/Frame.js'",
   "main": "dist/IFrame.js",
   "files": [
