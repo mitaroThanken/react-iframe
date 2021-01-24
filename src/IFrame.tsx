@@ -26,6 +26,11 @@ export type IFrameProps = {
    * iframe.contentDocument.body に設定する ReactNode
    */
   children?: React.ReactNode;
+
+  /**
+   * iframe に表示する src
+   */
+  src?: string;
 } & JSX.IntrinsicElements['iframe'];
 
 /**
@@ -35,6 +40,7 @@ export const IFrame: React.FC<IFrameProps> = ({
   title,
   children,
   head,
+  src,
   ...rest
 }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -48,6 +54,12 @@ export const IFrame: React.FC<IFrameProps> = ({
       setIFrameRoot(iframeRef.current.contentDocument.body);
     }
   }, [iframeRef]);
+
+  useEffect(() => {
+    if (iframeRef && iframeRef.current && src !== undefined) {
+      iframeRef.current.src = src;
+    }
+  }, [iframeRoot]);
 
   return (
     <iframe title={title} {...rest} ref={iframeRef}>
